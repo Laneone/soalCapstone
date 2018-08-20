@@ -2,3 +2,15 @@
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+ .App{
+   width: 100%;
+   height: -webkit-fill-available;
+ }
+}
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
+  .App{
+    font-size: 9px;
+  }
+}

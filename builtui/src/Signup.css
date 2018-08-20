@@ -1,6 +1,24 @@
-.signuPage{
+.signupPage{
+  height: -webkit-fill-available;
+  width: 100%;
+  background-color: #80878e;
+}
+.singupform{
     width: 40%;
     margin-left: 30%;
     padding-top:3%;
     
 }
+.askingSK{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
+    .singupform{
+      font-size: 6px;
+      width: 80%;
+      margin-left:34px;
+    }   
+  }

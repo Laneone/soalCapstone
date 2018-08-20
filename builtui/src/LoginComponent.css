@@ -17,7 +17,7 @@
     margin-top: 10%;
 }
 .login-form-button{
-    width: 100%;
+    width: 60%;
 }
 .ant-checkbox-wrapper + span, .ant-checkbox + span {
     padding-left: 8px;
@@ -25,19 +25,18 @@
     color: #d2c3c3;
 }
 .whiteOnOr{
-    color: #d2c3c3;
+    color: white;
+}
+.signupBtn{
+    color: #62b8e4;
+    font-weight: bold;
 }
 
-/* .login-form-forgot{
-    color: #f3a087;
-}
-
-.ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate .ant-checkbox-inner {
-    background-color:#f3a087;
-    border-color: #f3a087;
-}
-.ant-btn-primary {
-    color: #fff;
-    background-color: #f3a087;
-    border-color: #f3a087;
-} */
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
+    .login-form{
+      font-size: 9px;
+      width: 85%;
+      margin-left:28px;
+      margin-top: 38%;
+    }   
+  }
