@@ -6,13 +6,36 @@
 .singupform{
     width: 40%;
     margin-left: 30%;
-    padding-top:3%;
+    padding-top: 10%;
     
 }
 .askingSK{
   color: white;
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 0em;
+}
+.addresspad {
+  border-color: #40a9ff;
+  border-right-width: 1px !important;
+  padding-bottom: 42px;
+  padding-top: 13px;
+  margin-bottom: 7px;
+}
+.ant-checkbox + span {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #211e1e;
+  font-weight: bold;
+}
+.ant-btn-primary {
+    color: #fff;
+    background-color: #265682;
+    border-color: #295d8c;
+    padding: 0px 45px;
+}
+.regester {
+  color: #e8edf3;
 }
 
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
@@ -20,5 +43,9 @@
       font-size: 6px;
       width: 80%;
       margin-left:34px;
+      padding-top: 27%;
     }   
+    .askingSK{
+      font-size: 18px;
+    }
   }

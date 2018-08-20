@@ -1,5 +1,6 @@
 import React from 'react';
 import './Signup.css'
+import { Link } from 'react-router-dom';
 import { Form, Input, Button, Checkbox } from 'antd';
 const FormItem = Form.Item;
 
@@ -20,13 +21,12 @@ class Signup  extends React.Component {
             <Checkbox>
              Keeper
             </Checkbox>
-            <Input type="Address" placeholder="Address" />
+            <Input type="Address" placeholder="Address" className="addresspad"/>
             <Input type="pincode" placeholder="Pincode" />
         </FormItem>
         <FormItem >
-          <Button type="primary">
-           Regester
-          </Button>
+          <Button type="primary" className="regester"> <Link to="/HomePage">Regester </Link></Button>
+          
         </FormItem>
       </div>
     );
