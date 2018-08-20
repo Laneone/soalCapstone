@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import './LoginComponent.css'
 const FormItem = Form.Item; 
@@ -17,6 +17,7 @@ class LoginForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
+      <div className="loginpage">
       <Form onSubmit={this.handleSubmit} className="login-form">
         <FormItem>
           {getFieldDecorator('userName', {
@@ -43,9 +44,10 @@ class LoginForm extends React.Component {
           <Button type="primary" htmlType="submit" className="login-form-button">
             Log in
           </Button>
-          Or <a href="">register now!</a>
+         <span className="whiteOnOr"> Or</span> <a href="" onClick={this.props.onRegisterClick}>register now!</a>
         </FormItem>
       </Form>
+      </div>
     );
   }
 }

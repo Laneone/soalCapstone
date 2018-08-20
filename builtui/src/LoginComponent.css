@@ -1,3 +1,8 @@
+
+.loginpage{
+    background-image: url('./images/login-back.jpg');
+    height: -webkit-fill-available;
+}
 .login-form{
     width: 25%;
     float: left;
@@ -7,3 +12,25 @@
 .login-form-button{
     width: 100%;
 }
+.ant-checkbox-wrapper + span, .ant-checkbox + span {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #d2c3c3;
+}
+.whiteOnOr{
+    color: #d2c3c3;
+}
+
+/* .login-form-forgot{
+    color: #f3a087;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate .ant-checkbox-inner {
+    background-color:#f3a087;
+    border-color: #f3a087;
+}
+.ant-btn-primary {
+    color: #fff;
+    background-color: #f3a087;
+    border-color: #f3a087;
+} */

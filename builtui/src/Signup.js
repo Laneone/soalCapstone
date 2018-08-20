@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Signup.css'
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Checkbox, Button, AutoComplete } from 'antd';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -120,7 +120,7 @@ class RegistrationForm extends React.Component {
       <Form onSubmit={this.handleSubmit} className="signuPage">
         <FormItem
           {...formItemLayout}
-          label="E-mail"
+          label="E-mail"  
         >
           {getFieldDecorator('email', {
             rules: [{
