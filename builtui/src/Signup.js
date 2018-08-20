@@ -15,7 +15,7 @@ class Signup  extends React.Component {
             <Input type="number" placeholder="Mobile" />
             <p className="askingSK">What do you want to do?</p>
             <Checkbox>
-             Seller
+             Seeker
             </Checkbox>
             <Checkbox>
              Keeper
@@ -25,7 +25,7 @@ class Signup  extends React.Component {
         </FormItem>
         <FormItem >
           <Button type="primary">
-           Regester
+           Register
           </Button>
         </FormItem>
       </div>
