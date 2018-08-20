@@ -3,11 +3,14 @@ import './BookPost.css';
 import { Button } from 'antd';
 import { BrowserRouter as Router, Route ,Link } from 'react-router-dom';
 import { Input } from 'antd';
+import { Upload, Icon, Modal } from 'antd';
 
 const { TextArea } = Input;
 
 const ButtonGroup = Button.Group;
 
+
+// main component of posting books for selling
 class BookPost extends Component {
     state={
         afterSaveText:"Save and Continue",
@@ -44,6 +47,8 @@ class BookPost extends Component {
 }
 
 
+
+//here user have to put details of that book
 class Details extends Component{
     render(){
         return(
@@ -65,6 +70,8 @@ class Details extends Component{
     }
 }
 
+
+//here  we Gist 
 class Gist extends Component{
     render(){
         return(
@@ -77,6 +84,8 @@ class Gist extends Component{
 }
 
 
+
+//when the user click on image he get this component where i have msg for him
 class MsgforImage extends Component{
     render(){
         return(
@@ -87,11 +96,54 @@ class MsgforImage extends Component{
         )
     }
 }
+
+
+//here is the thing where you can upload image
 class Images extends Component{
+    state = {
+        previewVisible: false,
+        previewImage: '',
+        fileList: [{
+          uid: '-1',
+          name: 'xxx.png',
+          status: 'done',
+          url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+        }],
+      };
+
+            handleCancel = () => this.setState({ previewVisible: false })
+
+            handlePreview = (file) => {
+                this.setState({
+                previewImage: file.url || file.thumbUrl,
+                previewVisible: true,
+                });
+            }
+            
+            handleChange = ({ fileList }) => this.setState({ fileList })
+            
     render(){
+        const { previewVisible, previewImage, fileList } = this.state;
+        const uploadButton = (
+          <div>
+            <Icon type="plus" />
+            <div className="ant-upload-text">Upload</div>
+          </div>
+        );
         return(
             <div className="bookpostimages">
-
+                <Upload
+                    action="//jsonplaceholder.typicode.com/posts/"
+                    listType="picture-card"
+                    fileList={fileList}
+                    onPreview={this.handlePreview}
+                    onChange={this.handleChange}
+                    >
+                    {fileList.length >= 5 ? null : uploadButton}
+                </Upload>
+                <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
+                    <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                </Modal>
             </div>
         )
     }

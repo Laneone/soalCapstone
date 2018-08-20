@@ -52,7 +52,7 @@ a{
 /* Gist */
 .Gist{
     height: 100%;
-    width: 90%;
+    width: 40%;
     margin: auto;
 }
 .gistText{
@@ -61,16 +61,16 @@ a{
     margin-left: -263px;
 }
 
-/* magForImage */
+/* msgForImage */
 
 .msgforimage {
     background-color: #efece8;
-    width: 54%;
+    width: 40%;
     padding-top: 7%;
     border: 1px solid #92928c;
     margin: auto;
-    margin-top: 48%;
-    margin-bottom: 36%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 .imagemsgtext {
     margin-bottom: 19%;
@@ -86,7 +86,7 @@ a{
 /* bookpostimages */
 .bookpostimages{
     height: 415px;
-    width: 90%;
+    width: 40%;
     margin: auto;
 }
 
@@ -109,5 +109,47 @@ a{
         font-size: 27px;
         margin-bottom: -4px;
         font-family: -webkit-body;
+    }
+    .msgforimage {
+        background-color: #efece8;
+        width: 54%;
+        padding-top: 7%;
+        border: 1px solid #92928c;
+        margin: auto;
+        margin-top: 48%;
+        margin-bottom: 36%;
+    }
+    .imagemsgtext {
+        margin-bottom: 19%;
+        font-family: monospace;
+        font-size: 12px;
+    }
+    .msgforimage .ant-btn-primary {
+        color: #fff;
+        background-color: #1e8798;
+        border-color: #1a7d92;
+        border-radius: 0px;
+    }
+    .Gist{
+        height: 100%;
+        width: 90%;
+        margin: auto;
+    }
+    .gistText{
+        margin-bottom: -2px;
+        margin-top: 9%;
+        margin-left: -263px;
+    }
+    .bookpostimages{
+        height: 415px;
+        width: 90%;
+        margin: auto;
+    }
+    .ant-upload-list-picture .ant-upload-list-item, .ant-upload-list-picture-card .ant-upload-list-item {
+        padding: 8px;
+        border-radius: 43px;
+        /* border: 1px solid #d9d9d9; */
+        height: 66px;
+        position: relative;
     }
   }
