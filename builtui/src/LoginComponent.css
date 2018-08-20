@@ -3,10 +3,17 @@
     background-image: url('./images/login-back.jpg');
     height: -webkit-fill-available;
 }
+.loginpapier {
+    color: #dfe2ec;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: initial;
+}
 .login-form{
-    width: 25%;
+    width: 40%;
     float: left;
-    margin-left: 38%;
+    margin-left: 30%;
     margin-top: 10%;
 }
 .login-form-button{

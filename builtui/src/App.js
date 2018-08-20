@@ -13,9 +13,9 @@ class App extends Component {
   }
 
   onRegisterClick=()=>{
-    this.setState({isregister: !this.state.isregister})
+    this.setState({isregister: true})
   }
-
+  
   render() {
     return (
       <div className="App">

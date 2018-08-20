@@ -19,6 +19,7 @@ class LoginForm extends React.Component {
     return (
       <div className="loginpage">
       <Form onSubmit={this.handleSubmit} className="login-form">
+       <p className="loginpapier">Papier</p>
         <FormItem>
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }],
@@ -44,7 +45,7 @@ class LoginForm extends React.Component {
           <Button type="primary" htmlType="submit" className="login-form-button">
             Log in
           </Button>
-         <span className="whiteOnOr"> Or</span> <a href="" onClick={this.props.onRegisterClick}>register now!</a>
+         <span className="whiteOnOr"> Or</span> <div onClick={this.props.onRegisterClick}>register now!</div>
         </FormItem>
       </Form>
       </div>
