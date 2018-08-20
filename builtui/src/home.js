@@ -18,16 +18,14 @@ class HomePage   extends React.Component {
     return (
         <div className="homepage">
         <Layout>
-            <Sidebar
-                sidebar={<b>Sidebar content</b>}
-                open={this.state.sidebarOpen}
-                onSetOpen={this.onSetSidebarOpen}
-                styles={{ sidebar: { background: "white" } }}
+            <Sider
+            trigger={null}
+            collapsible
+            collapsed={this.state.collapsed}
             >
-                <button onClick={() => this.onSetSidebarOpen(true)}>
-                Open sidebar
-                </button>
-            </Sidebar>
+            <div className="logo" />
+            
+            </Sider>
             <Layout>
             <Header style={{ background: '#fff', padding: 0 }}>
                 <Icon

@@ -6,7 +6,7 @@
 }
 .ant-layout-content {
     -ms-flex: auto;
-    flex: auto;
+    flex: auto; 
     font-size: 16px;
 }
 

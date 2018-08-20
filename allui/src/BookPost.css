@@ -1,0 +1,113 @@
+.BookPost{
+    width: 60%;
+    height: -webkit-fill-available;
+    margin-left: 15%;
+}
+.bookpostDetails label{
+    text-align: left;
+}
+.bookpostDetails input{
+    padding: 0px 49px;
+    margin-bottom: 18px;
+}
+
+.bookpostDetails{
+    padding-top: 13px;
+    padding-bottom: 16px;
+}
+.ant-btn-group > .ant-btn:only-child {
+    border-radius: 4px;
+    padding: 2px 96px;
+}
+a{
+    text-decoration: none;
+}
+
+.posthead{
+    font-size: 32px;
+    margin-bottom: 6px;
+    font-family: -webkit-body;
+}
+
+.BookPost .ant-btn-primary {
+    color: #fff;
+    background-color: #1e8798;
+    border-color: #1a7d92;
+    border-radius: 0px;
+}
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+    color: #fff;
+    background-color: #36393c;
+    border-color: #333538;
+}
+
+.ant-btn-group .ant-btn-primary:first-child:not(:last-child) {
+    border-right-color: #4c4e50;
+    padding: 2px 57px;
+}
+.ant-btn-group > .ant-btn:last-child:not(:first-child), .ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
+    padding: 2px 57px;
+}
+
+/* Gist */
+.Gist{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+.gistText{
+    margin-bottom: -2px;
+    margin-top: 9%;
+    margin-left: -263px;
+}
+
+/* magForImage */
+
+.msgforimage {
+    background-color: #efece8;
+    width: 54%;
+    padding-top: 7%;
+    border: 1px solid #92928c;
+    margin: auto;
+    margin-top: 48%;
+    margin-bottom: 36%;
+}
+.imagemsgtext {
+    margin-bottom: 19%;
+    font-family: monospace;
+    font-size: 12px;
+}
+.msgforimage .ant-btn-primary {
+    color: #fff;
+    background-color: #1e8798;
+    border-color: #1a7d92;
+    border-radius: 0px;
+}
+/* bookpostimages */
+.bookpostimages{
+    height: 415px;
+    width: 90%;
+    margin: auto;
+}
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
+    .BookPost{
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .bookpostDetails lable{font-size: 13px;
+    padding-left: -12px;
+    color: black;
+    font-family: monospace;
+    }
+    .ant-btn-group > .ant-btn:only-child  {
+        border-radius: 0px;
+        margin-top: 17%;
+    }
+    .posthead {
+        font-size: 27px;
+        margin-bottom: -4px;
+        font-family: -webkit-body;
+    }
+  }
