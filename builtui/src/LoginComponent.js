@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
         </FormItem>
         <FormItem>
          
-          <Button type="primary" htmlType="submit" className="login-form-button"> <Link to="/HomePage">
+          <Button type="primary" htmlType="submit" className="login-form-button"> <Link to="/BookSearch">
             Log in
           </Link></Button><br/>
          <span className="whiteOnOr"> New member?</span> <span className="signupBtn" onClick={this.props.onRegisterClick}><Link to="/Signup">Sign up!</Link></span>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './BookSearch.css'
 import { Input,Icon ,Button,Popover } from 'antd';
-
+import {Link  } from 'react-router-dom';
 
 
 class BookSearch extends Component {
@@ -10,6 +10,7 @@ class BookSearch extends Component {
       <div className="BookSearch">
         <Icon type="left-circle" className="opensideIcon"/>
         <Input placeholder="Search"/>
+        <Button type="primary" block>View Books</Button>
         <Bookscollection/>
         <FilterBooks/>
       </div>
@@ -21,6 +22,7 @@ class Bookscollection extends Component{
   render(){
     return(
       <div className="Bookcollection">
+      <Link to="/DetailsOfBook"><div class="collectiondiv">
         <div className="haveimg"></div>
         <div className="bookstuff">
           <div>
@@ -28,10 +30,11 @@ class Bookscollection extends Component{
             <p className="authorName">Jeffrey Archer</p>
           </div>
           <div>
-            <span className="bookmoney">Rs. 300</span>
+            <span className="bookmoney">Rs.300</span>
             <span className="distance">2km</span>
           </div>
         </div>
+        </div></Link>
       </div>
     )
   }

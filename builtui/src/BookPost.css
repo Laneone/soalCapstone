@@ -40,13 +40,13 @@ a{
     background-color: #36393c;
     border-color: #333538;
 }
-
 .ant-btn-group .ant-btn-primary:first-child:not(:last-child) {
     border-right-color: #4c4e50;
-    padding: 2px 57px;
+    padding: 2px 88px;
 }
 .ant-btn-group > .ant-btn:last-child:not(:first-child), .ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
-    padding: 2px 57px;
+    padding: 2px 71px;
+    border-right-color: #4c4e50;
 }
 
 /* Gist */
@@ -89,7 +89,10 @@ a{
     width: 40%;
     margin: auto;
 }
-
+.ant-btn-group > .ant-btn:only-child {
+    border-radius: 4px;
+    padding: 2px 143px;
+}
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
     .BookPost{
       width: 100%;
@@ -103,7 +106,7 @@ a{
     }
     .ant-btn-group > .ant-btn:only-child  {
         border-radius: 0px;
-        margin-top: 17%;
+        
     }
     .posthead {
         font-size: 27px;
@@ -116,8 +119,8 @@ a{
         padding-top: 7%;
         border: 1px solid #92928c;
         margin: auto;
-        margin-top: 48%;
-        margin-bottom: 36%;
+        margin-top: 56%;
+        margin-bottom: 63%;
     }
     .imagemsgtext {
         margin-bottom: 19%;
@@ -130,24 +133,19 @@ a{
         border-color: #1a7d92;
         border-radius: 0px;
     }
-    .Gist{
-        height: 100%;
-        width: 90%;
-        margin: auto;
-    }
-    .gistText{
+    .gistText {
         margin-bottom: -2px;
         margin-top: 9%;
         margin-left: -263px;
+        font-size: 16px;
     }
-    .bookpostimages{
-        height: 415px;
+    .bookpostimages {
+        height: 631px;
         width: 90%;
         margin: auto;
     }
     .ant-upload-list-picture .ant-upload-list-item, .ant-upload-list-picture-card .ant-upload-list-item {
-        padding: 8px;
-        border-radius: 43px;
+        padding: 0px;
         /* border: 1px solid #d9d9d9; */
         height: 66px;
         position: relative;

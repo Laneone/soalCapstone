@@ -13,7 +13,7 @@ const ButtonGroup = Button.Group;
 // main component of posting books for selling
 class BookPost extends Component {
     state={
-        afterSaveText:<Link to="/Gist">Save and Continue</Link>,
+        afterSaveText:<Link to="/MsgforImage">Save and Continue</Link>,
         bookPostHead:"Post a book to rent out",
     }
     
@@ -34,7 +34,6 @@ class BookPost extends Component {
             </ButtonGroup>
             <div>
             <Route path  = "/Details" component={Details}/>
-            <Route path  = "/Gist" component={Gist}/>
             <Route path  = "/Images" component={Images}/>
             <Route path  = "/MsgforImage" component={ MsgforImage}/>
             </div>
@@ -66,23 +65,13 @@ class Details extends Component{
                 <input type="text" /><br/>
                 <lable>Price</lable><br/>
                 <input type="text" />
-            </div>
-        )
-    }
-}
-
-
-//here  we Gist 
-class Gist extends Component{
-    render(){
-        return(
-            <div className="Gist">
                 <p className="gistText">Gist</p>
-                <TextArea rows={17}/>
+                <TextArea rows={10}/>
             </div>
         )
     }
 }
+
 
 
 

@@ -25,7 +25,7 @@ class Signup  extends React.Component {
             <Input type="pincode" placeholder="Pincode" />
         </FormItem>
         <FormItem >
-          <Button type="primary" className="regester"> <Link to="/HomePage">Regester </Link></Button>
+          <Button type="primary" className="regester"> <Link to="/BookSearch">Regester </Link></Button>
           
         </FormItem>
       </div>
