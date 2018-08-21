@@ -13,9 +13,10 @@ const ButtonGroup = Button.Group;
 // main component of posting books for selling
 class BookPost extends Component {
     state={
-        afterSaveText:"Save and Continue",
+        afterSaveText:<Link to="/Gist">Save and Continue</Link>,
         bookPostHead:"Post a book to rent out",
     }
+    
   render() {
     return (
      <Router>
@@ -38,7 +39,7 @@ class BookPost extends Component {
             <Route path  = "/MsgforImage" component={ MsgforImage}/>
             </div>
             <ButtonGroup>
-            <Button type="primary" block><Link to="/Gist">{this.state.afterSaveText}</Link></Button>
+            <Button type="primary" block>{this.state.afterSaveText}</Button>
             </ButtonGroup>
         </div>
       </Router>
@@ -91,7 +92,7 @@ class MsgforImage extends Component{
         return(
             <div className="msgforimage">
                 <p className="imagemsgtext">Pless add some images to coomplete the process</p>
-                <Button type="primary" block><Link to="/Images">Ok</Link></Button>
+                <Button type="primary" block onClick={this.props.afterClickingOk}><Link to="/Images">Ok</Link></Button>
             </div>
         )
     }
