@@ -1,0 +1,22 @@
+.tickmark .tickicon{
+    display: block;
+    font-size: 59px;
+    padding-top: 64%;
+    color: #59ab68;
+}
+.backbtn{
+    font-size: 21px;
+    padding: 2px 22px;
+    margin-top: 24px;
+    border-radius: 4px;
+    background: #b3dc8a;
+    border: 1px solid green;
+}
+.backbtn a{
+    color: #1e3475;
+    font-family: monospace;
+}
+.tickmark{
+    height: -webkit-fill-available;
+    background: #e5fafd;
+}

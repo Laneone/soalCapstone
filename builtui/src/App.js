@@ -6,7 +6,10 @@ import Signup from './Signup.js';
 import BookSearch from './BookSearch';
 import BookPost from './BookPost.js';
 import BookDetails from './BookDetails';
+import Tickmark from './tickmark.js'
 import { BrowserRouter as Router, Route  } from 'react-router-dom';
+import Chat from './chat.js'
+import {GistOutCome, Review, DetailsOfBook } from './BookDetails'
 
 class App extends Component {
   
@@ -15,11 +18,15 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-            <Route path  = "/LoginComponent" component={LoginComponent}/>
-            <Route Exact path  = "/Signup" component={Signup}/> 
-            <Route Exact path  = "/BookSearch" component={BookSearch}/> 
-            <Route Exact path  = "/BookPost" component={BookPost}/> 
-            <Route Exact path  = "/DetailsOfBook" component={BookDetails}/>               
+            <Route exact path  = "/Login" component={LoginComponent}/>
+            <Route exact path  = "/Signup" component={Signup}/> 
+            <Route path  = "/BookSearch" component={BookSearch}/> 
+            <Route path  = "/BookPost" component={BookPost}/>
+            <Route  exact path ="/Tickmark" component={Tickmark}/>
+            <Route  path  = "/" component={BookDetails}/>
+            {/* <Route  path ="/GistOutCome" component={GistOutCome}/>
+            <Route  exact path ="/Chat" component={Chat}/> 
+            <Route  path ="/Review" component={Review}/>                               */}
         </div>
       </Router>
     );

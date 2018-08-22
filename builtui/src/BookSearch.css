@@ -77,7 +77,34 @@ input:not([type=range]), label, select, summary, textarea {
     height: 84px;
     border-top: 1px solid #d4cccc;
 }
-
+.filterbooks{
+    position: fixed;
+}
+.filterbtn{
+    font-size: 19px;
+    padding-right: 20%;
+    font-family: initial;
+    border-color: #265682;
+    padding-left: 17%;
+    background-color: #265682;
+    color: white;
+}
+.sortbtn{
+    font-size: 19px;
+    padding-right: 16%;
+    font-family: initial;
+    border-color: #265682;
+    padding-left: 17%;
+    background-color: #265682;
+    color: white;
+}
+.BookSearch .ant-btn-primary {
+    color: #fff;
+    background-color: #265682;
+    border-color: #295d8c;
+    padding: 0px 45px;
+    margin-top: 10px;
+}
 @media only screen and (min-width:321px) and (max-width:768px){
     .BookSearch{    
         width: 100%;
@@ -85,7 +112,7 @@ input:not([type=range]), label, select, summary, textarea {
     }   
     .Bookcollection {
         width: 100%;
-        height: 587px;
+        height: 600px;
         padding-left: 13px;
         text-align: left;
         margin-top: 12px;
@@ -112,13 +139,7 @@ input:not([type=range]), label, select, summary, textarea {
         background-color: #1e8798;
         border-color: #1e8798;
     }
-    .ant-btn-group > .ant-btn:last-child:not(:first-child), .ant-btn-group > span:last-child:not(:first-child) > .ant-btn {
-        border-bottom-right-radius: 2px;
-        border-top-right-radius: 2px;
-        padding: 2px 102px;
-        background-color: #1e8798;
-        border-color: #1e8798;
-    }  
+
     .opensideIcon {
         display: inline-block;
         font-family: "anticon" !important;
@@ -132,14 +153,7 @@ input:not([type=range]), label, select, summary, textarea {
         border-radius: 0px;
         padding: 17px 13px;
     }  
-    .BookSearch .ant-btn-primary {
-        color: #fff;
-        background-color: #288798;
-        border-color: #295d8c;
-        padding: 0px 45px;
-        margin-top: 12px;
-        border-radius: 0px;
-    }
+    
     }
   
   /* @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {

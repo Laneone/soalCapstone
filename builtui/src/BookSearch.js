@@ -19,22 +19,61 @@ class BookSearch extends Component {
 }
 
 class Bookscollection extends Component{
+  state = {
+    book : [
+      {
+        id: 1,
+        name: "jdkld",
+        cost: 56,
+        owner: "khdkj",
+        author:"dkhjkdd" ,
+      },
+      {
+        id: 2,
+        name: "ndvbk",
+        cost: 44,
+        owner:" fhjvk",
+        author: "jfdsgbnc",
+      },
+      {
+        id:3,
+        name:"khvjk" ,
+        cost: 45,
+        owner: "vdvfsv",
+        author:"vfvdf" ,
+      },
+      {
+        id:4,
+        name: "fdfsd",
+        cost: 54,
+        owner: "frgrg",
+        author: "frgerg",
+      },
+    ]
+  }
   render(){
     return(
       <div className="Bookcollection">
-      <Link to="/DetailsOfBook"><div class="collectiondiv">
-        <div className="haveimg"></div>
-        <div className="bookstuff">
-          <div>
-            <p className="bookName">A Quiver full of arrows</p>
-            <p className="authorName">Jeffrey Archer</p>
-          </div>
-          <div>
-            <span className="bookmoney">Rs.300</span>
-            <span className="distance">2km</span>
-          </div>
-        </div>
-        </div></Link>
+      {this.state.book.map((item, index) => {
+        return (
+          <Link to={"/DetailsOfBook/"+item.name} params={{book: item}}>
+            <div className="collectiondiv">
+              <div className="haveimg"></div>
+              <div className="bookstuff">
+                <div>
+                  <p className="bookName">{item.name}</p>
+                  <p className="authorName">{item.author}</p>
+                </div>
+                <div>
+                  <span className="bookmoney">Rs.{item.cost}</span>
+                  <span className="distance">2km</span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        )
+      })}
+      
       </div>
     )
   }
@@ -55,12 +94,12 @@ class FilterBooks extends Component{
       <div className="filterbooks">
           <Button.Group>
           <Popover placement="topLeft" content={content} trigger="click">
-            <Button type="primary" className="filterbtn">Filter</Button>
+            <button  className="filterbtn">Filter</button>
           </Popover>
             
-          <Button type="primary" className="sortbtn">
+          <button className="sortbtn">
             Sorted by
-          </Button>
+          </button>
         </Button.Group>
       </div>
     )

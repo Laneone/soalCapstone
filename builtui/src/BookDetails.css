@@ -15,6 +15,7 @@
     background-color: #84c9d6;
     border-color: #84c9d6;
     margin-top: 6px;
+    color: white;
 }
 .footerOfDetails a{
     color: white;
@@ -125,6 +126,27 @@
     font-family: -webkit-body;
 }
 
+/* Ifbook */
+.ifbook{
+    position: absolute;
+    margin-top: -369px;
+    font-size: 18px;
+    width: 66%;
+    background-color: #e1dde4;
+    height: 124px;
+    border: 1px solid #8c8585;
+    margin-left: 18%;
+}
+.ifbook button{
+    padding: 3px 23px;
+    background-color: #84c8d5;
+}
+.ifbook button{
+    color: black;
+}
+.ifbook a{
+    color: black;
+}
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
 
 }
