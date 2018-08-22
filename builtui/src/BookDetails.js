@@ -97,13 +97,16 @@ class Review extends Component{
         return(
             <div className="Review">
               <div className="starMarks1">
-                <p>Book is in excellent condition</p>
+                <p className="boldpera">Book is in excellent condition</p>
                 <Rate />
                 <p className="userpera">Book is delevered as a condition as promised by the seller</p>
-                <Icon type="woman" /><p>Name</p>
+                <Icon type="woman" className="manicon"/><p className="personame">Name</p>
               </div>
               <div className="starMarks2">
-              
+                <p className="boldpera">Greate Story</p>
+                <Rate />
+                <p className="userpera">Archer has once again proved his mastery in story telling</p>
+                <Icon type="woman" className="manicon"/><p className="personame">Name</p>
               </div>
             </div>
         )

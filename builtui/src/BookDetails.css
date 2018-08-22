@@ -96,6 +96,7 @@
     height: 257px;
     font-size: 17px;
     text-align: left;
+    padding: 36px;  
 }
 
 .starMarks2{
@@ -103,7 +104,25 @@
     width: 100%;
     font-size: 17px;
     text-align: left;
+    padding: 36px;  
 
+}
+.boldpera{
+    font-weight: bold;
+    color: black;
+    font-family: inherit;
+}
+.Review p{
+    margin-bottom: 0;
+}
+.manicon{
+    float: left;
+    font-size: 30px;
+}
+.personame{
+    float: left;
+    color: #b5b2ad;
+    font-family: -webkit-body;
 }
 
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
