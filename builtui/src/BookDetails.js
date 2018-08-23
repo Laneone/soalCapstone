@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route,Link ,Redirect } from 'react-router-dom'
 import { Button,Input,Icon,Rate } from 'antd';
 import fortest from './images/login-back.jpg'
 import Chat from './chat.js'
+import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios'
+
 const Search = Input.Search;
 const ButtonGroup = Button.Group;
 
@@ -23,15 +25,15 @@ class BookDetails extends Component {
                     />
                 </div>
                 <ButtonGroup>
-                <button className="btnBookdetails detailbtn"><Link to="/DetailsOfBook/:bookid">
+                <button className="btnBookdetails detailbtn"><Link to={"/DetailsOfBook/"+this.props.location.book.id}>
                     Details
                     </Link>
                 </button>
-                <button className="btnBookdetails"><Link to="/DetailsOfBook/:bookid/GistOutcome">
+                <button className="btnBookdetails"><Link to={"/DetailsOfBook/"+this.props.location.book.id+"/GistOutcome"}>
                     Gist
                     </Link>
                 </button>
-                <button className="btnBookdetails"><Link to="/DetailsOfBook/:bookid/Review">
+                <button className="btnBookdetails"><Link to={"/DetailsOfBook/"+this.props.location.book.id+"/Review"}>
                     Review
                     </Link>
                 </button>
