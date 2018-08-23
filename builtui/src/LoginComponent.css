@@ -1,6 +1,5 @@
 
 .loginpage{
-    background-image: url('./images/login-back.jpg');
     height: -webkit-fill-available;
 }
 .loginpapier {
@@ -10,14 +9,30 @@
     text-align: center;
     font-family: initial;
 }
+.login-form-button a{
+    color:white;
+}
 .login-form{
     width: 40%;
     float: left;
     margin-left: 30%;
-    margin-top: 10%;
 }
 .login-form-button{
     width: 60%;
+    color: #fbf3f3;
+    background-color: #177392;
+    border-color: #295d8c;
+    padding: 13px 45px;
+    height: 49px;
+}
+.signup-form-button{
+    width: 60%;
+    color: #fbf3f3;
+    background-color: #177392;
+    border-color: #295d8c;
+    padding: 13px 45px;
+    height: 49px;
+    margin-top: 6px;
 }
 .ant-checkbox-wrapper + span, .ant-checkbox + span {
     padding-left: 8px;
@@ -39,4 +54,18 @@
       margin-left:28px;
       margin-top: 38%;
     }   
+    .papierlogo{
+        background-color: #177392;
+        height: 64px;
+        -moz-box-shadow: inset 0 0 10px #000000;
+        box-shadow: inset 0 0 10px #4a0d0d;
+    
+    }
+    .ant-input-affix-wrapper .ant-input-prefix {
+        left: 31px;
+    }
+    .ant-input-affix-wrapper .ant-input:not(:first-child) {
+        padding-left: 30px;
+        border-color: #060606;
+    }
   }

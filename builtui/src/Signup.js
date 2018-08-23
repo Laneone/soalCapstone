@@ -9,11 +9,16 @@ class Signup  extends React.Component {
 
     return (
       <div className="signupPage">
+        <div className="papierlogo"> 
+          <p className="loginpapier">Papier</p>
+        </div>
         <FormItem className="singupform">
-         
+        
             <Input type="email" placeholder="Email" /> 
             <Input type="password" placeholder="Password" />
             <Input type="number" placeholder="Mobile" />
+            <Input type="Address" placeholder="Address" className="addresspad"/>
+            <Input type="pincode" placeholder="Pincode" />
             <p className="askingSK">What do you want to do?</p>
             <Checkbox>
              Seller
@@ -21,8 +26,6 @@ class Signup  extends React.Component {
             <Checkbox>
              Keeper
             </Checkbox>
-            <Input type="Address" placeholder="Address" className="addresspad"/>
-            <Input type="pincode" placeholder="Pincode" />
         </FormItem>
         <FormItem >
           <Button type="primary" className="regester"> <Link to="/BookSearch">Regester </Link></Button>

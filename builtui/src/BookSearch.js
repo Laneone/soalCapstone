@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import './BookSearch.css'
 import { Input,Icon ,Button,Popover } from 'antd';
 import {Link  } from 'react-router-dom';
+const Search = Input.Search;
 
 
 class BookSearch extends Component {
   render() {
     return (
       <div className="BookSearch">
-        <Icon type="left-circle" className="opensideIcon"/>
-        <Input placeholder="Search"/>
-        <Button type="primary" block>View Books</Button>
+        <div className="hidingWidth">
+            <Icon type="bars" className="opensideIcon"/>
+            <span className="searcheading">BOOK SEARCH</span>
+        </div>
         <Bookscollection/>
         <FilterBooks/>
       </div>
@@ -23,50 +25,56 @@ class Bookscollection extends Component{
     book : [
       {
         id: 1,
-        name: "jdkld",
-        cost: 56,
-        owner: "khdkj",
-        author:"dkhjkdd" ,
+        storyName:"A Quiver full of Arrow",
+        author:"Jeffrey Archer",
+        owner: "Suma K",
+        cost: 100,
       },
       {
         id: 2,
-        name: "ndvbk",
-        cost: 44,
-        owner:" fhjvk",
-        author: "jfdsgbnc",
+        storyName:"A Quiver full of Arrow",
+        author:"Jeffrey Archer",
+        owner: "Suma K",
+        cost: 100,
       },
       {
         id:3,
-        name:"khvjk" ,
-        cost: 45,
-        owner: "vdvfsv",
-        author:"vfvdf" ,
+        storyName:"A Quiver full of Arrow",
+        author:"Jeffrey Archer",
+        owner: "Suma K",
+        cost: 100,
       },
       {
         id:4,
-        name: "fdfsd",
-        cost: 54,
-        owner: "frgrg",
-        author: "frgerg",
+        storyName:"A Quiver full of Arrow",
+        author:"Jeffrey Archer",
+        owner: "Suma K",
+        cost: 100,
       },
     ]
   }
   render(){
     return(
       <div className="Bookcollection">
+       <Search
+          placeholder="input search text"
+          onSearch={value => console.log(value)}
+          style={{ width: 200 }}
+        />
+    <br /><br />
       {this.state.book.map((item, index) => {
         return (
-          <Link to={"/DetailsOfBook/"+item.name} params={{book: item}}>
+          <Link to={{pathname: "/DetailsOfBook/"+item.storyName, book: item }}  key={index}>
             <div className="collectiondiv">
               <div className="haveimg"></div>
               <div className="bookstuff">
                 <div>
-                  <p className="bookName">{item.name}</p>
+                  <p className="bookName">{item.storyName}</p>
                   <p className="authorName">{item.author}</p>
+                  <p className="authorName">{item.owner}</p>
                 </div>
                 <div>
                   <span className="bookmoney">Rs.{item.cost}</span>
-                  <span className="distance">2km</span>
                 </div>
               </div>
             </div>

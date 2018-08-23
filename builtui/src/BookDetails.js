@@ -4,13 +4,58 @@ import { BrowserRouter as Router, Route,Link ,Redirect } from 'react-router-dom'
 import { Button,Input,Icon,Rate } from 'antd';
 import fortest from './images/login-back.jpg'
 import Chat from './chat.js'
-import Tickmark from './tickmark.js'
-
+const Search = Input.Search;
 const ButtonGroup = Button.Group;
 
 class BookDetails extends Component {
-    constructor() {
-        super();
+  render() {
+      console.log(this.props.location.book.id)
+    return (
+        // <Router>
+        <div>                                                                                       
+            <div className="BookDetails">
+            <div className="hidingWidth">
+                <Icon type="bars" className="opensideIcon"/>
+                <Search
+                    placeholder="input search text"
+                    onSearch={value => console.log(value)}
+                    style={{ width: 200 }}
+                    />
+                </div>
+                <ButtonGroup>
+                <button className="btnBookdetails detailbtn"><Link to="/DetailsOfBook/:bookid">
+                    Details
+                    </Link>
+                </button>
+                <button className="btnBookdetails"><Link to="/DetailsOfBook/:bookid/GistOutcome">
+                    Gist
+                    </Link>
+                </button>
+                <button className="btnBookdetails"><Link to="/DetailsOfBook/:bookid/Review">
+                    Review
+                    </Link>
+                </button>
+                </ButtonGroup>
+            
+            <div className="contentBookdetails">
+
+            </div>
+                <Route exact path ="/DetailsOfBook/:bookid/Chat" component={Chat}/>
+                <Route exact path ="/DetailsOfBook/:bookid" component={DetailsOfBook}/>
+                <Route  exact path ="/DetailsOfBook/:bookid/GistOutCome" component={GistOutCome}/>
+                <Route  exact path ="/DetailsOfBook/:bookid/Review" component={Review}/>
+            </div>
+                {this.props.showPopup ? <IfBook text='Close Me'closePopup={this.props.togglePopup.bind(this)}/>
+                 : null
+                 }  
+        </div>
+    );
+  }
+}
+
+class DetailsFooter extends Component{
+    constructor(props) {
+        super(props);
         this.state = {
           showPopup: false
         };
@@ -20,69 +65,39 @@ class BookDetails extends Component {
           showPopup: !this.state.showPopup
         });
       }
-  render() {
-    return (
-        // <Router>
-        <div>
-            <div className="BookDetails">
-                <Icon type="left-circle" className="opensideIcon"/>
-                <Input placeholder="Search"/>
+    render(){
+        console.log("$$$$$$$$$$$$$$", this.props.location)
+        return(
+            <div className="DetailsFooter">
                 <ButtonGroup>
-                <button className="btnBookdetails"><Link to="/DetailsOfBook">
-                    Details
-                    </Link>
-                </button>
-                <button className="btnBookdetails"><Link to="/GistOutcome">
-                    Gist
-                    </Link>
-                </button>
-                <button className="btnBookdetails"><Link to="/Review">
-                    Review
-                    </Link> 
-                </button>
-                </ButtonGroup>
-            
-            <div className="contentBookdetails">
-
-            </div>
-                <Route exact path ="/Chat" component={Chat}/>
-                <Route  path ="/DetailsOfBook/:bookid" component={DetailsOfBook}/>
-                <Route  path ="/GistOutCome" component={GistOutCome}/>
-                <Route  path ="/Review" component={Review}/>
-            </div>
-                {this.state.showPopup ? <IfBook text='Close Me'closePopup={this.togglePopup.bind(this)}/>
-                 : null
-                 }
-            <ButtonGroup>
-                <button className="footerOfDetails"><Link to="/Chat">
+                <button className="footerOfDetails"><Link to="/DetailsOfBook/Chat">
                     Chat
                     </Link>
                 </button>
                 <button className="footerOfDetails" onClick={this.togglePopup.bind(this)}>
                     Book    
                 </button>
-            </ButtonGroup>  
-        </div>
-    );
-  }
+            </ButtonGroup> 
+            </div>
+        )
+    }
 }
 
 class DetailsOfBook extends Component{
-
-
     render(){
         const book = this.props.location.book;
-letsdoparty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             return(
+        console.log(book);
+        return (
             <div className="DetailsOfBook">
                 <div className="forimg">
                     <img src={fortest}/>
                 </div>
                 <div className="setof">
                     <p className="lighthing">setof three <span className="money">Rs.{book.cost}</span></p>
-                    <p className="darkthing">{book.name}</p>
+                    <p className="darkthing">{book.storyName}</p>
                 </div>
                 <div className="author">
-               `     <p className="lighthing">Author</p>
+                    <p className="lighthing">Author</p>
                     <p className="darkthing">{book.author}</p>
                   </div>
                 <div className="soldby">    
@@ -93,22 +108,26 @@ letsdoparty                                                                     
                     <p className="lighthing">Book Condition</p>
                     <p className="darkthing"></p>
                 </div>
+                <DetailsFooter/>
             </div>
         )
     }
 }
 
-export class GistOutCome extends Component{
+
+
+class GistOutCome extends Component{
     render(){
         return(
             <div className="GistOutcome">
                 <p>hi this is my book which name is so on.......</p>
+                <DetailsFooter/>
             </div>
         )
     }
 }
 
-export class Review extends Component{
+class Review extends Component{
     render(){
         return(
             <div className="Review">
@@ -124,6 +143,7 @@ export class Review extends Component{
                 <p className="userpera">Archer has once again proved his mastery in story telling</p>
                 <Icon type="woman" className="manicon"/><p className="personame">Name</p>
               </div>
+              <DetailsFooter/>
             </div>
         )
     }
@@ -145,6 +165,7 @@ class IfBook extends Component{
                     <button className="yesbook"><Link to="/Tickmark">yes</Link></button>
                     <button className="Nobook" onClick={this.props.closePopup}>No</button>
                 </ButtonGroup>
+                <DetailsFooter/>
             </div>
         )
     }

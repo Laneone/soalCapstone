@@ -1,17 +1,21 @@
 .btnBookdetails {
     font-size: 18px;
-    background-color: #1e8798;
-    padding: 2px 42px;
-    border-color: #1e8798;
-    margin-top: 10px;
+    background-color: #177392;
+    padding:6px 42px;
+    border-color: #177392;
 }
 .btnBookdetails a{
     color: white;
 }
+.hidingWidth{
+    background-color: #177392;
+    width: 100%;
+    height: 67px;
+}
  
-.footerOfDetails{
+.footerOfDetails {
     font-size: 18px;
-    padding: 2px 80px;
+    padding: 9px 79px;
     background-color: #84c9d6;
     border-color: #84c9d6;
     margin-top: 6px;
@@ -100,13 +104,12 @@
     padding: 36px;  
 }
 
-.starMarks2{
-    height: 345px;
+.starMarks2 {
+    height: 309px;
     width: 100%;
     font-size: 17px;
     text-align: left;
-    padding: 36px;  
-
+    padding: 34px;
 }
 .boldpera{
     font-weight: bold;
@@ -148,5 +151,50 @@
     color: black;
 }
 @media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
-
+    .opensideIcon:before {
+        display: block;
+        font-family: "anticon" !important;
+        font-size: 44px;
+        color: black;
+    }
+    .opensideIcon {
+        display: inline-block;
+        font-family: "anticon" !important;
+        color: #7084b7;
+        font-size: 21px;
+        padding-top: 10px;
+        padding-right: 8px;
+        float: left;
+        padding-left: 12px;
+    }
+    .ant-input-search:not(.ant-input-search-small) > .ant-input-suffix {
+        right: 235px;
+        font-size: 23px;
+        top: 26px;
+    }
+   
+    .ant-input-affix-wrapper {
+        font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 14px;
+        font-variant: tabular-nums;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.65);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-right: 5px;
+        margin-top: 7px;
+        height: 45px;
+    }
+    .ant-input-search:not(.ant-input-search-small) > .ant-input-suffix {
+        right: 39px;
+        font-size: 23px;
+        top: 22px;
+    }
+    
 }

@@ -1,15 +1,12 @@
 .BookSearch{
     height: -webkit-fill-available;
     width: 40%;
-    background-color: #fdfaf6;
 }
 .opensideIcon{
     display: block;
     font-family: "anticon" !important;
     color: #7084b7;
     font-size: 21px;
-    padding-top: 10px;
-    padding-right: 8px;
 }
 .Bookcollection{
     height: 443px;
@@ -26,7 +23,7 @@ input:not([type=range]), label, select, summary, textarea {
 
 
 .haveimg{
-    height: 64px;
+    height: 104px;
     width: 22%;
     display: inline-block;
     background-color: white;
@@ -43,14 +40,13 @@ input:not([type=range]), label, select, summary, textarea {
 }
 .bookName {
     margin-bottom: 0;
-    font-size: 11px;
+    font-size: 17px;
     font-family: monospace;
-    font-weight: bold;
     color: black;
 }
 .authorName {
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 17px;
     color: #9c9191;
 }
 .bookmoney{
@@ -59,10 +55,7 @@ input:not([type=range]), label, select, summary, textarea {
     font-weight: bold;
 
 }
-.distance{
-    color: #f1cf18;
-    font-weight: bold;  
-}
+
 
 .filterbooks .ant-btn-group{
     width: 100%;
@@ -74,30 +67,39 @@ input:not([type=range]), label, select, summary, textarea {
 }
 .collectiondiv {
     width: 100%;
-    height: 84px;
+    height: 116px;
     border-top: 1px solid #d4cccc;
 }
 .filterbooks{
     position: fixed;
 }
-.filterbtn{
+.filterbtn {
     font-size: 19px;
     padding-right: 20%;
     font-family: initial;
-    border-color: #265682;
+    border-color: #177392;
     padding-left: 17%;
-    background-color: #265682;
+    background-color: #177392;
     color: white;
+    padding: 9px 76px;
+}
+.searcheading{
+    font-size: 34px;
+    color: #fcf8f8;
+    font-family: monospace;
+    padding-right: 33px;
 }
 .sortbtn{
-    font-size: 19px;
-    padding-right: 16%;
-    font-family: initial;
-    border-color: #265682;
-    padding-left: 17%;
-    background-color: #265682;
-    color: white;
+        font-size: 19px;
+        padding-right: 20%;
+        font-family: initial;
+        border-color: #177392;
+        padding-left: 17%;
+        background-color: #177392;
+        color: white;
+        padding: 9px 67px;
 }
+
 .BookSearch .ant-btn-primary {
     color: #fff;
     background-color: #265682;
@@ -117,11 +119,12 @@ input:not([type=range]), label, select, summary, textarea {
         text-align: left;
         margin-top: 12px;
     }
-     .bookmoney {
+    .bookmoney {
         font-family: -webkit-pictograph;
-        color: #4eb53e;
+        color: #177392;
         font-weight: bold;
         padding-right: 40%;
+        font-size: 16px;
     }
     .filterbooks{
         position: static;
@@ -144,8 +147,7 @@ input:not([type=range]), label, select, summary, textarea {
         display: inline-block;
         font-family: "anticon" !important;
         color: #7084b7;
-        font-size: 21px;
-        padding-top: 10px;
+        font-size: 50px;
         padding-right: 8px;
     } 
     input:not([type=range]), label, select, summary, textarea {

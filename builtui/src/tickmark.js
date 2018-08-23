@@ -10,8 +10,10 @@ class Tickmark extends Component{
         return(
             <div className="tickmark">
                <Icon type="check-circle" className="tickicon"/>
+               <p className="tickera perapadding">Your order is placed!!!</p>
+               <p className="tickera ">Book is on it's way</p>
                 <ButtonGroup>
-                    <button className="backbtn"><Link to="/BookSearch">Go back</Link></button>
+                    <button className="backbtn"><Link to="/BookSearch">Close</Link></button>
                 </ButtonGroup>
             </div>
         )

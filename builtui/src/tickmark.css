@@ -1,22 +1,33 @@
-.tickmark .tickicon{
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 1000px) {
+.tickmark .tickicon {
     display: block;
-    font-size: 59px;
-    padding-top: 64%;
-    color: #59ab68;
+    font-size: 113px;
+    padding-top: 49%;
+    color: #52ae49;
 }
 .backbtn{
     font-size: 21px;
-    padding: 2px 22px;
-    margin-top: 24px;
+    padding: 8px 95px;
+    margin-top: 6px;
     border-radius: 4px;
-    background: #b3dc8a;
-    border: 1px solid green;
+    background: #177392;
+    border: #177392;
 }
 .backbtn a{
-    color: #1e3475;
+    color: white;
     font-family: monospace;
 }
 .tickmark{
     height: -webkit-fill-available;
-    background: #e5fafd;
+    background-color: #d2cfcf;
+}
+.tickera{
+    margin-bottom: 0px;
+    font-size: 25px;
+    color: black;
+}
+.perapadding{
+    padding-top: 32px;
+}
 }
